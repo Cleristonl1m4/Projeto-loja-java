@@ -62,8 +62,8 @@ public class ProdutoDao implements Dao<Produto> {
         stmt.setString(1, produto.getTitulo());
         stmt.setDouble(2, produto.getPreco());
         stmt.setInt(3, produto.getQuantidade());
-        stmt.setInt(4, produto.getId());
-        stmt.execute();
+        stmt.setInt(4,id);
+        stmt.executeUpdate();
     }
 
     @Override

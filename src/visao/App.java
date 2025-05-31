@@ -98,16 +98,16 @@ public class App {
     public static void alterarProduto(Scanner scanner, ProdutoDao produtoDao) throws SQLException{
         System.out.println("Digite o ID do Produto que deseja alterar: ");
         int id = scanner.nextInt();
-        Produto produto = new Produto();
+        Produto produto1 = new Produto();
         System.out.println("Digite o nome do produto: ");
         scanner.nextLine();
-        produto.setTitulo(scanner.nextLine());
+        produto1.setTitulo(scanner.nextLine());
         System.out.println("Digite o preco do produto: ");
-        produto.setPreco(scanner.nextDouble());
+        produto1.setPreco(scanner.nextDouble());
         System.out.println("Digite a quantidade: ");
-        produto.setQuantidade(scanner.nextInt());
+        produto1.setQuantidade(scanner.nextInt());
 
-        produtoDao.alterar(id, produto);
+        produtoDao.alterar(id, produto1);
 
         JOptionPane.showMessageDialog(null,"Produto alterado com Sucesso!");
     }
