@@ -11,7 +11,7 @@ public class Conexao {
     private static String PASS = "";
     private static final String URL = "jdbc:h2:mem:loja";
 
-    private Conexao(){}
+    public Conexao(){}
 
     public static Connection getConnection() throws SQLException {
         if(con == null){

@@ -15,7 +15,7 @@ public class ProdutoDao implements Dao<Produto> {
 
     public ProdutoDao() throws SQLException {
         con = Conexao.getConnection();
-        String sqlCreateTable = "CREATE TABLE produto(id INT PRIMARY KEY AUTO_INCREMENT, titulo VARCHAR(100), preco DECIMAL(10,2), quantidade INT);";
+        String sqlCreateTable = "CREATE TABLE PRODUTO(ID INT PRIMARY KEY AUTO_INCREMENT, TITULO VARCHAR(100), PRECO DECIMAL(10,2), QUANTIDADE INT);";
         PreparedStatement stmt = con.prepareStatement(sqlCreateTable);
 
         stmt.execute();
@@ -24,7 +24,7 @@ public class ProdutoDao implements Dao<Produto> {
     @Override
     public void salvar(Produto produto) throws SQLException {
         con = Conexao.getConnection();
-        String sqlInsert = "INSERT INTO produto(titulo, preco, quantidade) VALUES (?, ?, ?);";
+        String sqlInsert = "INSERT INTO PRODUTO(TITULO, PRECO, QUANTIDADE) VALUES (?, ?, ?);";
         PreparedStatement stmt = con.prepareStatement(sqlInsert);
         stmt.setString(1, produto.getTitulo());
         stmt.setDouble(2, produto.getPreco());
@@ -76,4 +76,7 @@ public class ProdutoDao implements Dao<Produto> {
 
     }
 
+
+    public void alterar(Produto produto) {
+    }
 }

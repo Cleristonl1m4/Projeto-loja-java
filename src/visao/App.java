@@ -14,8 +14,8 @@ import java.util.Scanner;
 public class App {
     public static ProdutoDao produtoDao = null;
     public static void main(String[] args) throws SQLException {
-        Server.createWebServer("-web","-webAllowOthers","-webPort","8082").start();
-        System.out.println("Console h2 acessivel em: htt://localhost:8082");
+        Server.createWebServer("-web","-webAllowOthers","-webPort","4042").start();
+        System.out.println("Console h2 acessivel em: htt://localhost:4042");
 
         produtoDao = new ProdutoDao();
 
